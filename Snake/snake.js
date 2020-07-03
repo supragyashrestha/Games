@@ -20,7 +20,7 @@ function Snake() {
                 gameSound.stop();
                 scoreWindow.innerHTML += TotalScore;
                 scoretab.style.display = "block";
-                noLoop();
+                //noLoop();
                 console.log(TotalScore);
                 this.total = 0;
                 this.tail = [];
