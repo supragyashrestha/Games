@@ -1,9 +1,10 @@
 var s;
 var speed = 7.0;
-var musicSpeed = 0.7;
+var musicSpeed = 1.0;
 var eatSound;
 var deathSound;
 var gameSound;
+var TotalScore = 0;
 
 function preload() {
     eatSound = loadSound("Powerup3.wav");
@@ -34,6 +35,7 @@ function draw() {
     if(s.eat(food)){
         eatSound.play();
         musicSpeed += 0.05;
+        TotalScore += 1;
         gameSound.rate(musicSpeed);
         pick_food_location();
     }
