@@ -17,6 +17,12 @@ function preload() {
 function setup() {
     var canvas = createCanvas(600, 600);
     canvas.parent('game_window');
+    resetSketch();
+    var button = createButton("Play Again");
+    button.mousePressed(resetSketch);
+}
+
+function resetSketch() {
     gameSound.play();
     s = new Snake();
     frameRate(speed);
