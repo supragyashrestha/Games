@@ -18,6 +18,9 @@ function Snake() {
                 clear();
                 background(255,0,0);
                 gameSound.stop();
+                button = createButton('click me');
+                button.position(width/2 , height/2);
+                button.mousePressed(ReloadGame);
                 scoreWindow.innerHTML += TotalScore;
                 scoretab.style.display = "block";
                 noLoop();
@@ -27,6 +30,10 @@ function Snake() {
 
             }
         }
+    }
+
+    function ReloadGame() {
+        window.location.reload();
     }
 
     this.eat = function(pos){
