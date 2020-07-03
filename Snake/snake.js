@@ -17,6 +17,8 @@ function Snake() {
                 console.log("GAME OVER!!!");
                 background(255,0,0);
                 gameSound.stop();
+                scoreWindow.innerHTML += TotalScore;
+                scoretab.style.display = "block";
                 noLoop();
                 console.log(this.total+1);
                 this.total = 0;
