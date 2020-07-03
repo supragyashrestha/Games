@@ -8,6 +8,7 @@ function preload() {
     eatSound = loadSound("Powerup3.wav");
     deathSound = loadSound("GameOver.mp3");
     gameSound = loadSound("snakemusik1.mp3");
+    gameSound.setVolume(0.5);
 }
 
 function setup() {
