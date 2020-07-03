@@ -15,12 +15,13 @@ function Snake() {
             if(d<1){
                 deathSound.play();
                 console.log("GAME OVER!!!");
+                clear();
                 background(255,0,0);
                 gameSound.stop();
                 scoreWindow.innerHTML += TotalScore;
                 scoretab.style.display = "block";
                 noLoop();
-                console.log(this.total+1);
+                console.log(TotalScore);
                 this.total = 0;
                 this.tail = [];
 
