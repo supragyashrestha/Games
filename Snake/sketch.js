@@ -4,7 +4,6 @@ var musicSpeed = 1.0;
 var eatSound;
 var deathSound;
 var gameSound;
-var TotalScore = 0;
 var scoreWindow = document.getElementById("demo");
 var scoretab = document.getElementById("scoreTab");
 

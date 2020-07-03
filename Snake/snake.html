@@ -17,8 +17,11 @@
         <script src="p5.js"></script>
         <script src="p5.sound.min.js"></script>
         <script>
+            var TotalScore = 0;
+
             function ReloadGame() {
-                window.location.reload();
+                redraw();
+                TotalScore = 0;
             }
         </script>
     </head>
