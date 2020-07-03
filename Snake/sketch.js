@@ -1,9 +1,9 @@
 var s;
-
+var speed = 7.0;
 function setup() {
     createCanvas(600,600);
     s = new Snake();
-    frameRate(7);
+    frameRate(speed);
     pick_food_location();
 }
 

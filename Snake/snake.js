@@ -24,6 +24,8 @@ function Snake() {
         var d = dist(this.x, this.y, pos.x, pos.y);
         if(d<1){
             this.total++;
+            speed = speed + 0.5;
+            frameRate(speed);
             return true;
         }
         else{
