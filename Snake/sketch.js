@@ -1,6 +1,6 @@
 var s;
 var speed = 7.0;
-var musicSpeed = 1.0;
+var musicSpeed = 0.7;
 var eatSound;
 var deathSound;
 var gameSound;
@@ -13,7 +13,8 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(600,600);
+    var canvas = createCanvas(600, 600);
+    canvas.parent('game_window');
     gameSound.play();
     s = new Snake();
     frameRate(speed);
