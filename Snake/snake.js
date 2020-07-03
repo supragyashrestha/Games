@@ -13,7 +13,7 @@ function Snake() {
             var pos = this.tail[i];
             var d = dist(this.x , this.y , pos.x , pos.y);
             if(d<1){
-                console.log(this.total);
+                console.log(this.total+1);
                 this.total = 0;
                 this.tail = [];
             }
