@@ -40,6 +40,10 @@ function draw() {
     rect(food.x,food.y,size,size);
 }
 
+function mousePressed() {
+    s.total++;
+}
+
 function keyPressed() {
     if(keyCode === UP_ARROW){
         if(s.yspeed===0){
@@ -61,9 +65,5 @@ function keyPressed() {
             s.dir(1,0);
         }
         //console.log("right");
-    }
-
-    if(key = ' '){
-        s.total++;
     }
 }
