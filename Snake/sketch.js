@@ -1,5 +1,15 @@
 var s;
 var speed = 7.0;
+var eatSound;
+var deathSound;
+var gameSound;
+
+function preload() {
+    eatSound = loadSound("Powerup3.wav");
+    deathSound = loadSound("GameOver.mp3");
+    gameSound = loadSound("snakemusik1.mp3");
+}
+
 function setup() {
     createCanvas(600,600);
     s = new Snake();
@@ -21,6 +31,7 @@ function mousePressed() {
 function draw() {
     background(51);
     if(s.eat(food)){
+        eatSound.play();
         pick_food_location();
     }
     s.death();
