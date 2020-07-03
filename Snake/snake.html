@@ -20,8 +20,13 @@
             var TotalScore = 0;
 
             function ReloadGame() {
-                redraw();
+                speed = 7.0;
+                musicSpeed = 1.0;
                 TotalScore = 0;
+                redraw();
+                s = new Snake();
+                frameRate(speed);
+                pick_food_location();    
             }
         </script>
     </head>
