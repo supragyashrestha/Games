@@ -18,9 +18,7 @@ function Snake() {
                 clear();
                 background(255,0,0);
                 gameSound.stop();
-                button = createButton('click me');
-                button.position(width/2 , height/2);
-                button.mousePressed(ReloadGame);
+                refresh(reLoader);
                 scoreWindow.innerHTML += TotalScore;
                 scoretab.style.display = "block";
                 noLoop();
@@ -32,6 +30,9 @@ function Snake() {
         }
     }
 
+    function refresh(rl){
+        rl.innerHTML += "<br><button type='button' onclick='ReloadGame()' >Play Again</button><br>";
+    }
     function ReloadGame() {
         window.location.reload();
     }

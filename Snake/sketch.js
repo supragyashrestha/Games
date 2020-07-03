@@ -7,6 +7,7 @@ var gameSound;
 var TotalScore = 0;
 var scoreWindow = document.getElementById("demo");
 var scoretab = document.getElementById("scoreTab");
+var reLoader = document.getElementById("reloader");
 
 function preload() {
     eatSound = loadSound("Powerup3.wav");
