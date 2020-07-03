@@ -1,5 +1,6 @@
 var s;
 var speed = 7.0;
+var musicSpeed = 1.0;
 var eatSound;
 var deathSound;
 var gameSound;
@@ -31,6 +32,8 @@ function draw() {
     background(51);
     if(s.eat(food)){
         eatSound.play();
+        musicSpeed += 0.1;
+        gameSound.rate(musicSpeed);
         pick_food_location();
     }
     s.death();

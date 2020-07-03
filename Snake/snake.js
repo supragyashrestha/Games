@@ -14,9 +14,13 @@ function Snake() {
             var d = dist(this.x , this.y , pos.x , pos.y);
             if(d<1){
                 deathSound.play();
+                print("GAME OVER!!!");
+                background(255,0,0);
+                noLoop();
                 console.log(this.total+1);
                 this.total = 0;
                 this.tail = [];
+
             }
         }
     }
