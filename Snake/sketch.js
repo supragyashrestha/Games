@@ -18,7 +18,6 @@ function preload() {
 function setup() {
     var canvas = createCanvas(600, 600);
     canvas.parent('game_window');
-    textAlign(CENTER);
     gameSound.play();
     s = new Snake();
     frameRate(speed);
