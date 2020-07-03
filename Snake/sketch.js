@@ -12,17 +12,13 @@ function preload() {
     gameSound.setVolume(0.4);
 }
 
-let sketch = function(p) {
-    p.setup = function() {
-        createCanvas(600,600);
-        gameSound.play();
-        s = new Snake();
-        frameRate(speed);
-        pick_food_location();
-    }
-  };
-  new p5(sketch, window.document.getElementById('game_window'));
-
+function setup() {
+    createCanvas(600,600);
+    gameSound.play();
+    s = new Snake();
+    frameRate(speed);
+    pick_food_location();
+}
 
 function pick_food_location() {
     var col = floor(width/size);
