@@ -12,6 +12,7 @@ function preload() {
 
 function setup() {
     createCanvas(600,600);
+    gameSound.play();
     s = new Snake();
     frameRate(speed);
     pick_food_location();
@@ -24,9 +25,6 @@ function pick_food_location() {
     food.mult(size);
 }
 
-function mousePressed() {
-    s.total++;
-}
   
 function draw() {
     background(51);
@@ -63,5 +61,9 @@ function keyPressed() {
             s.dir(1,0);
         }
         //console.log("right");
+    }
+
+    if(key = ' '){
+        s.total++;
     }
 }
