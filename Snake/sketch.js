@@ -9,16 +9,20 @@ function preload() {
     eatSound = loadSound("Powerup3.wav");
     deathSound = loadSound("GameOver.mp3");
     gameSound = loadSound("snakemusik1.mp3");
-    gameSound.setVolume(0.5);
+    gameSound.setVolume(0.4);
 }
 
-function setup() {
-    createCanvas(600,600);
-    gameSound.play();
-    s = new Snake();
-    frameRate(speed);
-    pick_food_location();
-}
+let sketch = function(p) {
+    p.setup = function() {
+        createCanvas(600,600);
+        gameSound.play();
+        s = new Snake();
+        frameRate(speed);
+        pick_food_location();
+    }
+  };
+  new p5(sketch, window.document.getElementById('game_window'));
+
 
 function pick_food_location() {
     var col = floor(width/size);
@@ -32,7 +36,7 @@ function draw() {
     background(51);
     if(s.eat(food)){
         eatSound.play();
-        musicSpeed += 0.1;
+        musicSpeed += 0.05;
         gameSound.rate(musicSpeed);
         pick_food_location();
     }

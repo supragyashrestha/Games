@@ -14,8 +14,9 @@ function Snake() {
             var d = dist(this.x , this.y , pos.x , pos.y);
             if(d<1){
                 deathSound.play();
-                print("GAME OVER!!!");
+                console.log("GAME OVER!!!");
                 background(255,0,0);
+                gameSound.stop();
                 noLoop();
                 console.log(this.total+1);
                 this.total = 0;
