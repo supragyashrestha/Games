@@ -4,19 +4,28 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Flappy Ball</title>
+        <style>
+            body {
+                background-image: url("https://wallpaperaccess.com/full/269147.png");
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: rgb(62, 253, 4);
+            }
+        </style>
         <script src="p5.min.js"></script>
         
     </head>
     <body>
-        <div class="head"><h1 style="text-align: center;">Flappy Ball</h1></div>
+        <div class="head"><h1 style="text-align: center; font-size: 42px;">Hopping Alien</h1></div>
         <div class="gamescore" id="scoreTab" style="display: none;">
             <h2 style="text-align: center;">Game Over!!!</h2>
             <h2 id="demo" style="text-align: center;">Your final score is: </h2>
             <div style="text-align: center;">
-                <button type='button' onclick='ReloadGame()'>Play Again</button>
+                <button type='button' onclick='window.location.reload()'>Play Again</button>
                 <br><br>
             </div>
         </div>
+        <div id="game_window" style="text-align: center;"></div>
         
     
         <script src="flappy.js"></script>

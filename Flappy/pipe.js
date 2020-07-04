@@ -33,7 +33,10 @@ function pipe() {
             if(bird.x > this.x && bird.x < this.x + this.w){
                 this.highlight = true;
                 gameover = true;
+                mode = 3;
                 console.log("Game End!");
+                scoreWindow.innerHTML += TotalScore;
+                scoretab.style.display = "block";
                 return true;
             }
         }
@@ -45,7 +48,7 @@ function pipe() {
         if(bird.x > this.x + this.w + alien.width/2){
             if(!this.pipe_crossed){
                 this.pipe_crossed = true;
-                TotalScore += 1;
+                if(mode!=3){TotalScore += 1;}
                 console.log(TotalScore);
             }
         }
