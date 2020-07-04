@@ -5,14 +5,18 @@ function Bird() {
     this.lift = -15;
     this.air_resistance = 0.9;
     this.velocity = 0;
+    this.fallRotation = -PI / 6;
 
     this.push = function() {
         this.velocity += this.lift;
     }
     
     this.show = function() {
-        fill(255);
-        ellipse(this.x , this.y , 24 , 24);
+        
+        image(alien,this.x,this.y,40,40);
+       
+        //fill(255,255,0);
+        //ellipse(this.x , this.y , 24 , 24);
     }
 
     this.update = function() {
