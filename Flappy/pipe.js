@@ -1,6 +1,6 @@
 function pipe() {
     this.top = random((3*height)/4);
-    this.bottom = random(600 - 70 -this.top);
+    this.bottom = random(600 - 80 -this.top);
     this.x = width;
     this.w = 20;
     this.speed = 2;
@@ -29,7 +29,7 @@ function pipe() {
     }
 
     this.hits = function(bird) {
-        if(bird.y < this.top + alien.height/2 || bird.y > height - this.bottom - alien.height/2){
+        if(bird.y < this.top + alien.height/4 || bird.y > height - this.bottom - alien.height/4){
             if(bird.x > this.x && bird.x < this.x + this.w){
                 this.highlight = true;
                 gameover = true;
